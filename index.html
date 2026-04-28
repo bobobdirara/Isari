@@ -93,11 +93,24 @@ input:focus,select:focus{
   box-shadow:0 0 0 3px rgba(0,98,65,.12);
 }
 
-.dateTimeRow{
+..dateTimeRow{
   display:grid;
-  grid-template-columns:1.4fr .75fr;
-  gap:10px;
+  grid-template-columns:minmax(0,1fr) 92px;
+  gap:8px;
   align-items:end;
+}
+
+.dateTimeRow input,
+.dateTimeRow select{
+  min-width:0;
+  height:52px;
+  padding:10px 11px;
+  font-size:14px;
+}
+
+#baseHour{
+  text-align:center;
+}
 }
 
 .hint,.notice{
